@@ -7,12 +7,12 @@ async function processData(inputFilePath, outputFilePath) {
     await fs.writeFile(outputFilePath, upperCasedData);
   } catch (error) {
     console.error("Error processing data:", error);
-    process.exit(1); // Exit with error code 1 in case of failure hog atb
+    process.exit(1); 
   }
 }
 
 if (require.main === module) {
-  // This will only be true if the script is executed directly from the command line kai lie only 
+
   const [inputFilePath, outputFilePath] = process.argv.slice(2);
   processData(inputFilePath, outputFilePath);
 }
